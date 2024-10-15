@@ -1,0 +1,3 @@
+conda install pytorch=1.7.1 torchvision cudatoolkit=10.1 -c pytorch
+pip install mmcv==0.4.4
+pip install -r requirements.txt
