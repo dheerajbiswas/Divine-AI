@@ -22,7 +22,8 @@ Mainly there are three operations which are taking place in the domain matching 
 The feature maps of content and style images from a particular VGG network layer are denoted by fc and fs. 
 a) Whitening: A feature's covariance matrix can be transformed linearly to become the identity matrix using the Whitening Transform. E is the orthogonal matrix of eigenvectors for rotation, and D is a diagonal matrix for scaling. The sample mean mc is subtracted to get the centered data, or fc. 
 b) Coloring: The opposite of whitening is the coloring transform. It creates a certain covariance matrix from the whitened data. Es and Ds are the diagonal matrix of fsfs⊤ and the orthogonal eigenvector matrix. The output is then styled of fs by adding the mean of a style feature ms to fcs.
-Fourier perspective was used to modify the stylized feature map.
+
+3. Phase Replacement (PR) - Fourier perspective was used to modify the stylized feature map.
 Using style transfer procedures directly could harm the HR Ref image's structural details. We suggest using the Phase Replacement (PR) technique to solve this problem. We maintain the amplitude of the stylized feature map throughout the WCT process while preserving the phase information of the content feature map. This method enables us to preserve the image's structural details and it efficiently reduces the domain gap between input and reference features while maintaining structural information, thus enabling the RefSR model to perform better in terms of SR.
 
 
