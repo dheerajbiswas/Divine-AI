@@ -16,6 +16,8 @@ That is the reason why its implementation is performed.
 
 Description of the Domain Matching Architecture - 
 
+![Screenshot 2024-11-19 192624](https://github.com/user-attachments/assets/cbc91fa4-e6d1-4fb9-9eb0-0aadc489b1b9)
+
 Mainly there are three operations which are taking place in the domain matching process - 
 1. Grayscale matching - The grayscale transformation for input photos in order to close the domain gap in the correspondence matching stage. Three channels are averaged to produce a single channel in the grayscale transition. picture before it is entered as input into the encoder, before the matching encoder procedure. Using grayscale conversion successfully removes color information from a photograph, leaving the picture's structural details. This straightforward adjustment reveals that the effect of the distribution gap (e.g., color, brightness) between two pictures is successfully decreased, and the Performance in matching has improved.
 
@@ -30,6 +32,8 @@ Using style transfer procedures directly could harm the HR Ref image's structura
 
 
 Description of DATSR model - 
+
+
 The goal of reference-based image super-resolution (RefSR) is to super-resolve low-resolution (LR) images by using auxiliary reference (Ref) images. RefSR has gained a lot of attention lately since it offers a different approach to outperforming single picture SR. However, there are two significant obstacles to solving the RefSR problem: (i) When LR and Ref photos differ greatly, it is hard to match their correspondence; (ii) it is very difficult to figure out how to transfer the required texture from Ref images to make up for the details in LR images.  A deformable attention Transformer, called DATSR, with several scales to address these problems with RefSR. Each scale is made up of a texture feature encoder (TFE), reference-based deformable attention (RDA), and residual feature aggregation (RFA) module. TFE first extracts image transformation (e.g., brightness) insensitive features for LR and Ref images, then RDA can use multiple relevant textures to compensate for more information for LR features, and finally RFA aggregates LR features and relevant textures to produce a more visually appealing result. Extensive trials show that our DATSR outperforms benchmark datasets both statistically and qualitatively.
 
 
