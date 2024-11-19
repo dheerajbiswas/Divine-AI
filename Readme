@@ -11,4 +11,12 @@ Course Instructor: Dr. Rajesh Kumar Mandotiya
 Project: Implementation of the paper titled 'Bridging the Domain Gap: A Simple Domain Matching Method for Reference-Based Image Super-Resolution in Remote Sensing' published in IEEE GEOSCIENCE AND REMOTE SENSING LETTERS, VOL. 21, 2024 authored by Jeongho Min et al.
 
 Description of the work - 
-As per the paper, the domain matching module is integrated with the baseline model of DATSR. As shown in paper, the three algorithms DATSR, C2-Matching and AMSA are used as baseline model for integration of the proposed Domain Matching mmodule. Out of these three models, the DATSR turns out to be best performing algorithm 
+As per the paper, the domain matching module is integrated with the baseline model of DATSR. As shown in paper, the three algorithms DATSR, C2-Matching and AMSA are used as baseline model for integration of the proposed Domain Matching module. Out of these three models, the DATSR turns out to be best performing algorithm among the others.
+That is the reason why its implementation is performed.
+
+Description of the Domain Matching Architecture - 
+
+Mainly there are three operations which are taking place in the domain matching process - 
+1. Grayscale matching - The grayscale transformation for input photos in order to close the domain gap in the correspondence matching stage. Three channels are averaged to produce a single channel in the grayscale transition. picture before it is entered as input into the encoder, before the matching encoder procedure. Using grayscale conversion successfully removes color information from a photograph, leaving the picture's structural details. This straightforward adjustment reveals that the effect of the distribution gap (e.g., color, brightness) between two pictures is successfully decreased, and the Performance in matching has improved.
+
+2. Whitening and Coloring Transform (WCT) - Whitening and Coloring Transform (WCT) is used in the texture transfer process to lessen the domain gap. WCT compares the style feature map from the pre-trained VGG network with the covariance matrix of the content feature map:
