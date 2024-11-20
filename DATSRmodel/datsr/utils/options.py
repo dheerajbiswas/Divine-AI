@@ -57,6 +57,7 @@ def parse(opt_path, is_train=True):
         opt['crop_border'] = scale
 
     # datasets
+    print(opt)
     for phase, dataset in opt['datasets'].items():
         # for several datasets, e.g., test_1, test_2
         phase = phase.split('_')[0]

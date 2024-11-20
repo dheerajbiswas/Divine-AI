@@ -1,9 +1,9 @@
-import datsr.models.archs.arch_util as arch_util
+import models.archs.arch_util as arch_util
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-# from datsr.models.archs.DCNv2.dcn_v2 import DCN_sep_pre_multi_offset_flow_similarity as DynAgg
-from datsr.models.archs.dcn_v2 import DCN_sep_pre_multi_offset_flow_similarity as DynAgg
+# from models.archs.DCNv2.dcn_v2 import DCN_sep_pre_multi_offset_flow_similarity as DynAgg
+from models.archs.dcn_v2 import DCN_sep_pre_multi_offset_flow_similarity as DynAgg
 import torch.utils.checkpoint as checkpoint
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 import pdb

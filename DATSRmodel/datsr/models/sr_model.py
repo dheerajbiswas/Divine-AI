@@ -13,7 +13,7 @@ from utils import ProgressBar, tensor2img
 from .base_model import BaseModel
 import pdb
 
-loss_module = importlib.import_module('datsr.models.losses')
+loss_module = importlib.import_module('models.losses')
 
 logger = logging.getLogger('base')
 
