@@ -49,8 +49,6 @@ python dm/test.py
 python dm/train.py
 </code>
 
-## Results - 
-
 
 ## References 
 1. Min, Jeongho, et al. "Bridging the Domain Gap: A Simple Domain Matching Method for Reference-based Image Super-Resolution in Remote Sensing." IEEE Geoscience and Remote Sensing Letters (2023).
