@@ -44,6 +44,13 @@ The goal of reference-based image super-resolution (RefSR) is to super-resolve l
 
 ## Execution
 Run in command line:
+
+Running DATSR only
+<code>
+!python datsr/test.py -opt "options/test/test_restoration_mse.yml" --launcher "none"
+</code>
+
+Running DATSR+DM 
 <code>
 python dm/test.py 
 python dm/train.py
