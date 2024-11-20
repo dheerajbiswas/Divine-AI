@@ -1,16 +1,16 @@
 # Divine-AI: Implementation of the paper titled 'Bridging the Domain Gap: A Simple Domain Matching Method for Reference-Based Image Super-Resolution in Remote Sensing'
 
-### Team Members:
+### Team Members
 1. Dheeraj Kumar Biswas (P24EE003) 
 2. Saransh Chourey (P24EE005) 
 
 ### Course Instructor: Dr. Rajesh Kumar Mandotiya
 
-## Description of the work - 
+## Description of the work
 As per the paper, the domain matching module is integrated with the baseline model of DATSR. As shown in paper, the three algorithms DATSR, C2-Matching and AMSA are used as baseline model for integration of the proposed Domain Matching module. Out of these three models, the DATSR turns out to be best performing algorithm among the others.
 That is the reason why its implementation is performed.
 
-## Description of the Domain Matching Architecture - 
+## Description of the Domain Matching Architecture
 
 ![Screenshot 2024-11-19 192624](https://github.com/user-attachments/assets/cbc91fa4-e6d1-4fb9-9eb0-0aadc489b1b9)
 
@@ -28,21 +28,29 @@ Using style transfer procedures directly could harm the HR Ref image's structura
 
 
 
-## Description of DATSR model - 
+## Description of DATSR model
 
 ![framework](https://github.com/user-attachments/assets/84afcf65-c014-4e9b-b7f1-d8adcd1f9046)
 The goal of reference-based image super-resolution (RefSR) is to super-resolve low-resolution (LR) images by using auxiliary reference (Ref) images. RefSR has gained a lot of attention lately since it offers a different approach to outperforming single picture SR. However, there are two significant obstacles to solving the RefSR problem: (i) When LR and Ref photos differ greatly, it is hard to match their correspondence; (ii) it is very difficult to figure out how to transfer the required texture from Ref images to make up for the details in LR images.  A deformable attention Transformer, called DATSR, with several scales to address these problems with RefSR. Each scale is made up of a texture feature encoder (TFE), reference-based deformable attention (RDA), and residual feature aggregation (RFA) module. TFE first extracts image transformation (e.g., brightness) insensitive features for LR and Ref images, then RDA can use multiple relevant textures to compensate for more information for LR features, and finally RFA aggregates LR features and relevant textures to produce a more visually appealing result. Extensive trials show that our DATSR outperforms benchmark datasets both statistically and qualitatively.
 
-## Requirements - 
+## Requirements
 1. Python 3.8, PyTorch >= 1.7.1
 2. CUDA 10.0 or CUDA 10.1
 3. GCC 5.4.0
 
-## Dataset - 
-1. RRSSRD
-2. CUFED
+## Dataset
+1. DATSR is trained on CUFED5 dataset and tested on RRSSRD dataset
+2. Domain matching is trained and tested on RRSSRD dataset
+
+## Execution
+Run in command line:
+<code>
+python dm/test.py 
+python dm/train.py
+</code>
 
 ## Results - 
+
 
 ## References 
 1. Min, Jeongho, et al. "Bridging the Domain Gap: A Simple Domain Matching Method for Reference-based Image Super-Resolution in Remote Sensing." IEEE Geoscience and Remote Sensing Letters (2023).
